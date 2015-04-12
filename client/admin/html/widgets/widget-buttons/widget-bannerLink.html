@@ -1,0 +1,12 @@
+<a href="#" st-icon="'link'" ng-click="triggerSubsetOpen($event)" tabindex="-1">Banner link</a>
+<div class="widget-subset">
+	<ul class="widget-list">
+		<li class="widget-item widget-back-item"><a href="#" st-icon="'back'" ng-click="triggerSubsetClose($event)" class="widget-subset-btn-back"></a></li>
+		<li ng-if="widgetBtnBannerLink.url" class="widget-item" widget-btn-url="widgetBtnBannerLink.url"></li>
+		<li ng-if="widgetBtnBannerLink.align" class="widget-item" widget-btn-align="widgetBtnBannerLink.align"></li>
+		<li ng-if="widgetBtnBannerLink.fontWeight" class="widget-item" widget-btn-font-weight="widgetBtnBannerLink.fontWeight"></li>
+		<li ng-if="widgetBtnBannerLink.fontSize" class="widget-item" widget-btn-font-size="widgetBtnBannerLink.fontSize"></li>
+		<li ng-if="widgetBtnBannerLink.color" class="widget-item" widget-btn-color="widgetBtnBannerLink.color"></li>
+		<li ng-if="widgetBtnBannerLink.linkType" class="widget-item" widget-btn-link-type="widgetBtnBannerLink.linkType"></li>
+	</ul>
+</div>

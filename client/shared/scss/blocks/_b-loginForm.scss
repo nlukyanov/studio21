@@ -1,0 +1,37 @@
+.login-logo {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40px;
+	z-index: 1;
+}
+#loginForm {
+	width: 100%;
+	max-width: 270px;
+	margin: 0 auto;
+}
+#loginForm * {
+	font-size: $h5FontSize;
+}
+.login-wrapper {
+	min-height: 100vh;
+	position: relative;
+}
+.login-box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 300px;
+}
+.login-frame {
+	display: table;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+}
+.login-holder {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 200px 0 0;
+}

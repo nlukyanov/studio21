@@ -1,0 +1,49 @@
+{
+	"data": [
+		{
+			"title": "Главная",
+			"slug": "dashboard",
+			"icon": "dashboard"
+		},
+		{
+			"title": "Страницы",
+			"slug": "pages",
+			"icon": "copy"
+		},
+		{
+			"title": "Продукты",
+			"slug": "products",
+			"icon": "archive"
+		},
+		{
+			"title": "Фильтры",
+			"slug": "filters",
+			"icon": "filter"
+		},
+		{
+			"title": "Модерация",
+			"slug": "moderation",
+			"icon": "question"
+		},
+		{
+			"title": "Заказы",
+			"slug": "orders",
+			"icon": "paperplane"
+		},
+		{
+			"title": "Сообщения",
+			"slug": "messages",
+			"icon": "mail"
+		},
+		{
+			"title": "Профиль",
+			"slug": "profile",
+			"icon": "user"
+		},
+		{
+			"title": "Настройки",
+			"slug": "settings",
+			"icon": "gear"
+		}
+	]
+}

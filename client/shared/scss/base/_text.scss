@@ -1,0 +1,62 @@
+hr {
+	border: none;
+	border-top: 1px solid #e4e4e4;
+	margin-bottom: 20px;
+}
+.fontWeight-1 {
+	font-weight: $fontLight;
+}
+.fontWeight-2 {
+	font-weight: $fontNormal;
+}
+.fontWeight-3 {
+	font-weight: $fontBold;
+}
+.fontSize-1 {
+	font-size: $h6FontSize;
+	line-height: 1.5em;
+}
+.fontSize-2 {
+	font-size: $h5FontSize;
+	line-height: 1.5em;
+}
+.fontSize-3 {
+	font-size: $h4FontSize;
+	line-height: 1.5em;
+}
+.fontSize-4 {
+	font-size: $h3FontSize;
+	line-height: 1.5em;
+}
+.fontSize-5 {
+	font-size: $h2FontSize;
+	line-height: 1.5em;
+}
+.fontSize-6 {
+	font-size: $h1FontSize;
+	line-height: 1.5em;
+}
+.color-1 {
+	color: $primaryColor;
+}
+.color-2 {
+	color: $greyColor;
+}
+.color-3 {
+	color: $purpleColor;
+}
+.heading.heading-1 .color-1,
+.heading.heading-1 .color-2,
+.heading.heading-1 .color-3 {
+	color: $secondaryColor;
+}
+.heading.heading-2 .color-1,
+.heading.heading-2 .color-2,
+.heading.heading-2 .color-3 {
+	color: $primaryColor;
+}
+.heading.heading-3 .color-1,
+.heading.heading-3 .color-2,
+.heading.heading-3 .color-3 {
+	color: $secondaryColor;
+}

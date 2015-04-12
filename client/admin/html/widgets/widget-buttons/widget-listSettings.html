@@ -1,0 +1,15 @@
+<a href="#" st-icon="'gear'" ng-click="triggerToggleDrop($event)" tabindex="-1">List settings</a>
+<div class="widget-drop">
+	<form class="list-settings-form pull-left">
+		<fieldset>
+			<div>
+				<input type="checkbox" class="switch" element-switch ng-model="widgetBtnListSettings.value.bullets">
+				<label>Использовать буллеты</label>
+			</div>
+			<div ng-if="widgetBtnListSettings.value.bullets">
+				<input type="checkbox" class="switch" element-switch ng-model="widgetBtnListSettings.value.numeric">
+				<label>Цифровые буллеты</label>
+			</div>
+		</fieldset>
+	</form>
+</div>

@@ -1,0 +1,73 @@
+.modal-wrapper {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+}
+.modal-wrapper:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: $secondaryBg;
+	opacity: .9;
+}
+.modal-box {
+	display: table;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
+.modal-frame {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.modal-holder {
+	width: 500px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	background: $primaryBg;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: top;
+	border: 3px solid $greyBg;
+	position: relative;
+}
+.modal-holder .modal-heading {
+	text-transform: uppercase;
+}
+.modal-holder .modal-hide-link {
+	position: absolute;
+	right: -14px;
+	top: -14px;
+	background: $primaryBg;
+	border-radius: 100%;
+	width: 27px;
+	height: 27px;
+	text-align: center;
+	border: 3px solid $greyBg;
+}
+.modal-holder .modal-hide-link svg {
+	width: 15px;
+	height: 100%;
+	vertical-align: middle;
+	-moz-transform: none;
+	-webkit-transform: none;
+	-o-transform: none;
+	-ms-transform: none;
+	transform: none;
+	@include transition-all;
+}
+.modal-holder .modal-hide-link:hover svg {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}

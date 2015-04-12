@@ -1,0 +1,25 @@
+aside {
+	float: left;
+	width: 300px;
+	padding: 40px;
+	box-sizing: border-box;
+	margin-left: -40px;
+	padding-left: 80px;
+	position: relative;
+	z-index: 1;
+}
+aside:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 99999px;
+	background: $greyBg;
+}
+aside.dark-aside {
+}
+aside.dark-aside:before {
+	background: $secondaryBg;
+}

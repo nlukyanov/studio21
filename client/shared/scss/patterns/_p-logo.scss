@@ -1,0 +1,7 @@
+.logo svg {
+	fill: $secondaryBg;
+	@include transition-fill;
+}
+.logo-link:hover svg {
+	fill: $purpleBg;
+}

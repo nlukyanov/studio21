@@ -1,0 +1,169 @@
+.banner-block {
+	margin: 0 auto;
+	min-width: 500px;
+}
+.banner-block.bannerWidth-1 {
+	width: 60%;
+}
+.banner-block.bannerWidth-2 {
+	width: 70%;
+}
+.banner-block.bannerWidth-3 {
+	width: 80%;
+}
+.banner-block.bannerWidth-4 {
+	width: 90%;
+}
+.banner-block.bannerWidth-5 {
+	width: 100%;
+}
+.banner-holder {
+	margin: 0 -40px;
+	position: relative;
+	min-height: 200px;
+	box-sizing: border-box;
+}
+.banner-holder.bannerHeight-1 {
+	padding-bottom: 20%;
+}
+.banner-holder.bannerHeight-2 {
+	padding-bottom: 25%;
+}
+.banner-holder.bannerHeight-3 {
+	padding-bottom: 33%;
+}
+.banner-holder.bannerHeight-4 {
+	padding-bottom: 45%;
+}
+.banner-holder.bannerHeight-5 {
+	height: 100vh;
+}
+.banner-placeholder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: #f2f2f2;
+	text-align: center;
+}
+.banner-placeholder svg {
+	height: 100%;
+	vertical-align: middle;
+	fill: #c5c5c5;
+	width: 50%;
+	max-width: 300px;
+}
+.banner-holder .banner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
+}
+.banner-holder.bannerOverflow-1 .banner:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: $secondaryBg;
+	opacity: .75;
+}
+.banner-holder.bannerOverflow-2 .banner:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: $primaryBg;
+	opacity: .75;
+}
+.banner-text .color-2 {
+	color: $secondaryColor;
+}
+.banner-block {
+	position: relative;
+}
+.banner-text-wrapper {
+	position: absolute;
+	left: 80px;
+	top: 80px;
+	right: 80px;
+	bottom: 80px;
+}
+.banner-text-box {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.banner-text-frame {
+	display: table-cell;
+}
+.banner-text {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: 650px;
+}
+.banner-text-wrapper.bannerPosition-1 .banner-text-frame {
+	vertical-align: top;
+	text-align: left;
+}
+.banner-text-wrapper.bannerPosition-2 .banner-text-frame {
+	vertical-align: top;
+	text-align: center;
+}
+.banner-text-wrapper.bannerPosition-3 .banner-text-frame {
+	vertical-align: top;
+	text-align: right;
+}
+.banner-text-wrapper.bannerPosition-4 .banner-text-frame {
+	vertical-align: middle;
+	text-align: left;
+}
+.banner-text-wrapper.bannerPosition-5 .banner-text-frame {
+	vertical-align: middle;
+	text-align: center;
+}
+.banner-text-wrapper.bannerPosition-6 .banner-text-frame {
+	vertical-align: middle;
+	text-align: right;
+}
+.banner-text-wrapper.bannerPosition-7 .banner-text-frame {
+	vertical-align: bottom;
+	text-align: left;
+}
+.banner-text-wrapper.bannerPosition-8 .banner-text-frame {
+	vertical-align: bottom;
+	text-align: center;
+}
+.banner-text-wrapper.bannerPosition-9 .banner-text-frame {
+	vertical-align: bottom;
+	text-align: right;
+}
+.banner-noHeading .item-bannerHeading {
+	display: none;
+}
+.banner-noText .item-bannerText {
+	display: none;
+}
+.banner-noLink .item-bannerLink {
+	display: none;
+}
+.banner-block .item-text {
+	margin-top: 10px;
+}
+.banner-block .item-text:first-child {
+	margin-top: 0;
+}
+.banner-block .btn-holder {
+	margin-top: 20px;
+}
+.banner-block .btn-holder:first-child {
+	margin-top: 0;
+}

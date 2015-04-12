@@ -1,0 +1,19 @@
+<a href="#" st-icon="'gear'" ng-click="triggerToggleDrop($event)" tabindex="-1">Feature settings</a>
+<div class="widget-drop">
+	<form class="feature-settings-form pull-left">
+		<fieldset>
+			<div>
+				<input type="checkbox" class="switch" element-switch ng-model="widgetBtnFeatureSettings.heading.value">
+				<label>{{ widgetBtnFeatureSettings.heading.label }}</label>
+			</div>
+			<div>
+				<input type="checkbox" class="switch" element-switch ng-model="widgetBtnFeatureSettings.text.value">
+				<label>{{ widgetBtnFeatureSettings.text.label }}</label>
+			</div>
+			<div>
+				<input type="checkbox" class="switch" element-switch ng-model="widgetBtnFeatureSettings.link.value">
+				<label>{{ widgetBtnFeatureSettings.link.label }}</label>
+			</div>
+		</fieldset>
+	</form>
+</div>

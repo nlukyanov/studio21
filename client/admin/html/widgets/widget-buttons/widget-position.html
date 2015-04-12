@@ -1,0 +1,6 @@
+<a href="#" st-icon="'position'" ng-click="triggerToggleDrop($event)" tabindex="-1">Position</a>
+<div class="widget-drop">
+	<div class="positions-holder">
+		<a href="#" class="position-link" ng-click="changePosition($event, item)" ng-class="{ 'active': widgetBtnPosition.value == item }" ng-repeat="item in positions">{{ item }}</a>
+	</div>
+</div>

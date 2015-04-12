@@ -1,0 +1,10 @@
+<a href="#" st-icon="'heading'" ng-click="triggerSubsetOpen($event)" tabindex="-1">Banner heading</a>
+<div class="widget-subset">
+	<ul class="widget-list">
+		<li class="widget-item widget-back-item"><a href="#" st-icon="'back'" ng-click="triggerSubsetClose($event)" class="widget-subset-btn-back"></a></li>
+		<li ng-if="widgetBtnBannerHeading.align" class="widget-item" widget-btn-align="widgetBtnBannerHeading.align"></li>
+		<li ng-if="widgetBtnBannerHeading.fontWeight" class="widget-item" widget-btn-font-weight="widgetBtnBannerHeading.fontWeight"></li>
+		<li ng-if="widgetBtnBannerHeading.fontSize" class="widget-item" widget-btn-font-size="widgetBtnBannerHeading.fontSize"></li>
+		<li ng-if="widgetBtnBannerHeading.color" class="widget-item" widget-btn-color="widgetBtnBannerHeading.color"></li>
+	</ul>
+</div>

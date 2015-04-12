@@ -1,0 +1,10 @@
+<nav>
+	<ul class="adminNav-list">
+		<li ng-repeat="item in nav.data" class="adminNav-listItem" ng-class="{current: item.slug == currentSlug}">
+			<a href="#/{{ item.slug }}" title="{{ item.title }}" class="adminNav-listItem-link">
+				<span st-icon="item.icon" class="pull-center adminNav-list-iconHolder"></span>
+				{{ item.title }}
+			</a>
+		</li>
+	</ul>
+</nav>

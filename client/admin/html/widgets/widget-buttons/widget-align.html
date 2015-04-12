@@ -1,0 +1,7 @@
+<a href="#" st-icon="alignIcon" ng-click="triggerToggleDrop($event)" tabindex="-1">Align</a>
+<div class="widget-drop align-drop">
+	<a href="#" st-icon="'align-left'" title="Выровнять по левому краю" ng-click="changeAlign($event, 'left')" ng-class="{ active: widgetBtnAlign.value == 'left' }" tabindex="-1">Left</a>
+	<a href="#" st-icon="'align-center'" title="Выровнять по центру" ng-click="changeAlign($event, 'center')" ng-class="{ active: widgetBtnAlign.value == 'center' }" tabindex="-1">Center</a>
+	<a href="#" st-icon="'align-justify'" title="Растянуть" ng-click="changeAlign($event, 'justify')" ng-class="{ active: widgetBtnAlign.value == 'justify' }" tabindex="-1">Justify</a>
+	<a href="#" st-icon="'align-right'" title="Выровнять по правому краю" ng-click="changeAlign($event, 'right')" ng-class="{ active: widgetBtnAlign.value == 'right' }" tabindex="-1">Right</a>
+</div>

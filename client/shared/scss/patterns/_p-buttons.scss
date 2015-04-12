@@ -1,0 +1,59 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	outline: none;
+	cursor: pointer;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 10px;
+}
+.btn.color-1,
+.btn.btn-primary {
+	color: $secondaryColor;
+	background: $secondaryBg;
+	@include transition-bg;
+}
+.btn.color-1:hover,
+.btn.btn-primary:hover {
+	background: $secondaryBgHover;
+}
+.btn.color-2,
+.btn.btn-secondary {
+	color: $primaryColor;
+	background: $primaryBg;
+	@include transition-bg;
+}
+.btn.color-2:hover,
+.btn.btn-secondary:hover {
+	background: $primaryBgHover;
+}
+.btn.color-3,
+.btn.btn-purple {
+	color: $purpleColor;
+	background: $purpleBg;
+	@include transition-bg;
+}
+.btn.color-3:hover,
+.btn.btn-purple:hover {
+	background: $purpleBgHover;
+}
+.btn.color-1 .contenteditable,
+.btn.btn-primary .contenteditable {
+	color: $secondaryColor !important;
+}
+.btn.color-2 .contenteditable,
+.btn.btn-secondary .contenteditable {
+	color: $primaryColor !important;
+}
+.btn.color-3 .contenteditable,
+.btn.btn-purple .contenteditable {
+	color: $secondaryColor !important;
+}
+.item-link {
+	text-align: left;
+}
+.btn .item-link {
+	text-align: center;
+}
+

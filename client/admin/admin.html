@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="stAdmin">
+<head>
+	<meta charset="UTF-8">
+	<title>STUDIO21 | Homepage</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../client/shared/style.css">
+
+	<script type="text/javascript" src="../client/shared/js/libs/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../client/shared/js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="../client/shared/js/libs/angular.route.min.js"></script>
+	<script type="text/javascript" src="../client/shared/js/libs/jquery-ui.js"></script>
+	<script type="text/javascript" src="../client/shared/js/libs/ui-slider.js"></script>
+
+	<script type="text/javascript" src="../client/admin/st-admin.js"></script>
+	<script type="text/javascript" src="../client/admin/js/app/router.js"></script>
+
+	<!-- FACTORIES start -->
+		<script type="text/javascript" src="../client/shared/js/app/factories/factory-settings.js"></script>
+		<script type="text/javascript" src="../client/shared/js/app/factories/factory-icons.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/factories/factory-adminNav.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/factories/factory-pagesList.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/factories/factory-contentType.js"></script>
+	<!-- FACTORIES end -->
+
+	<!-- WIDGETS start -->
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-item.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-align.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-fontWeight.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-fontSize.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-color.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-view-heading.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-width.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-height.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-view-image.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-visibility.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-upload.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-listSettings.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-addListItem.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-overflow.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-position.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-bannerSettings.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-bannerHeading.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-bannerText.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-bannerLink.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-linkType.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-url.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-positionVertical.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-positionHorisontal.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/widgets/widget-buttons/widget-featureSettings.js"></script>
+	<!-- WIDGETS end -->
+
+	<!-- COMPONENTS start -->
+		<script type="text/javascript" src="../client/admin/js/app/components/component-stLoginForm.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/components/component-stAdminNav.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/components/component-stAdminPages.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/components/component-stAdminPagesEdit.js"></script>
+	<!-- COMPONENTS end -->
+
+	<!-- ELEMENTS start -->
+		<script type="text/javascript" src="../client/shared/js/app/elements/element-stLogo.js"></script>
+		<script type="text/javascript" src="../client/shared/js/app/elements/element-stIcon.js"></script>
+		<script type="text/javascript" src="../client/shared/js/app/elements/element-stModal.js"></script>
+		<script type="text/javascript" src="../client/shared/js/app/elements/element-switch.js"></script>
+		<script type="text/javascript" src="../client/admin/js/app/elements/element-contenteditable.js"></script>
+	<!-- ELEMENTS end -->
+	<script>
+		var config = {
+			prefix: '/client/admin/'
+		}
+	</script>
+</head>
+<body>
+	<div class="page-wrapper">
+		<ng-view></ng-view>
+	</div>
+</body>
+</html>

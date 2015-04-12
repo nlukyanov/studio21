@@ -1,0 +1,49 @@
+.list {
+	counter-reset: list; 
+}
+.list.bullets {
+
+}
+.list.numeric {
+
+}
+.list-item {
+
+}
+.list.bullets .list-item {
+
+}
+.list .list-item-content {
+	overflow: hidden;
+}
+.list.bullets .list-item:before {
+	content: '';
+	float: left;
+	width: 5px;
+	height: 5px;
+	border-radius: 100%;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+.list.bullets .list-item.color-1:before {
+	background: $secondaryBg;
+}
+.list.bullets .list-item.color-2:before {
+	background: $greyBg;
+}
+.list.bullets .list-item.color-3:before {
+	background: $purpleBg;
+}
+.list.numeric .list-item {
+
+}
+.list.numeric .list-item:before {
+	counter-increment: list;
+	content: counter(list) ". ";
+	float: left;
+	margin-right: 5px;
+	margin-top: 1px;
+	background: none !important;
+	width: auto;
+	height: auto;
+}

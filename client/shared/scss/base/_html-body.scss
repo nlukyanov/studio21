@@ -1,0 +1,18 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background: $primaryBg;
+	font-size: $primaryFontSize;
+	line-height: $primaryLineHeight;
+	font-family: $primaryFontFamily;
+	font-weight: $fontNormal;
+	color: $primaryColor;
+}
+.page-wrapper {
+	padding: 40px;
+	overflow: hidden;
+	box-sizing: border-box;
+	min-height: 100vh;
+}

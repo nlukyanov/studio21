@@ -1,0 +1,8 @@
+section {
+	margin-bottom: 40px;
+	position: relative;
+	min-height: 27px;
+}
+section:after {
+	@include clearfix;
+}

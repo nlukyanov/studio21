@@ -1,0 +1,13 @@
+<div class="heading heading-1">
+	<h5>Страницы</h5>
+	<a href="#/admin-pages/new" ng-click="addPage($event)" title="Добавить страницу" class="heading-btn alt-addPage-link" st-icon="'plus'">Добавить страницу</a>
+</div>
+<ul class="adminPages-list">
+	<li ng-repeat="page in shopPages.data" class="adminPages-listItem">
+		<span class="adminPages-listTitle pull-center">{{ page.title }}</span>
+		<a href="#/{{ page.slug }}" ng-style="{'background': 'url(../client/admin/images/shop-pages/{{ page.slug }}.png)'}" class="adminPages-listLink"></a>
+	</li>
+	<li class="adminPages-listItem addPage-item">
+		<a href="#/pages/new" ng-click="addPage($event)" title="Добавить страницу" st-icon="'plus'" class="addPage-link">Добавить страницу</a>
+	</li>
+</ul>

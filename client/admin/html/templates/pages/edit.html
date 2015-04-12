@@ -1,0 +1,265 @@
+<div class="adminTopBar">
+	<div class="admin-logo">
+		<st-logo></st-logo>
+	</div>
+	<div class="adminNav">
+		<st-admin-nav></st-admin-nav>
+	</div>
+</div>
+<div class="adminPages-new" st-admin-pages-edit>
+	<div class="heading heading-2 newPage-settings">
+		<form class="newPage-settings-form">
+			<fieldset>
+				<div class="newPage-settings-form-col">
+					<span class="newPage-settings-form-screenshotHolder">
+						<span class="newPage-settings-form-screenshotPlaceholder" st-icon="'logo'"></span>
+						<span class="newPage-settings-form-screenshot"></span>
+						<span class="newPage-settings-form-screenshot-icon" st-icon="'upload'"></span>
+						<input type="file">
+					</span>
+				</div>
+				<div class="newPage-settings-form-col">
+					<div class="form-row">
+						<label for="page-name">Название</label>
+						<div class="input-holder">
+							<input type="text" value="{{ model.title }}">
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="page-slug">Путь</label>
+						<div class="input-holder">
+							<input type="text" value="{{ model.slug }}">
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<aside class="dark-aside"></aside>
+	<article>
+		<section class="page-section" ng-repeat="item in content">
+			<div class="section-type">
+				<label class="adminPages-new-asideLabel pull-right">{{ item.typeLabel }} &nbsp;&mdash;</label>
+			</div>
+			<div class="section-content" ng-if="item.typeValue == 'heading'">
+				<div class="{{ item.heading.settings.viewHeading.value }} heading-{{ item.heading.settings.color.value }} widget-holder">
+					<div class="widget-trigger">
+						<input
+							type="text"
+							class="contenteditable item-heading fontSize-{{ item.heading.settings.fontSize.value }} pull-{{ item.heading.settings.align.value }} fontWeight-{{ item.heading.settings.fontWeight.value }} color-{{ item.heading.settings.color.value }}"
+							placeholder="Введите заголовок"
+							value="{{ item.heading.html }}">
+					</div>
+					<div widget-item="item.heading" widget-item-type="item.typeValue"></div>
+				</div>
+			</div>
+			<div class="section-content" ng-if="item.typeValue == 'text'">
+				<div class="widget-holder">
+					<div class="widget-trigger">
+						<textarea
+							class="contenteditable item-text fontSize-{{ item.text.settings.fontSize.value }} pull-{{ item.text.settings.align.value }} fontWeight-{{ item.text.settings.fontWeight.value }} color-{{ item.text.settings.color.value }}"
+							placeholder="Введите текст">{{ item.text.html }}</textarea>
+					</div>
+					<div widget-item="item.text" widget-item-type="item.typeValue"></div>
+				</div>
+			</div>
+			<div class="section-content" ng-if="item.typeValue == 'list'">
+				<div class="widget-holder">
+					<div class="widget-trigger">
+						<ul ng-class="{ 'bullets': item.text.settings.listSettings.value.bullets, 'numeric': item.text.settings.listSettings.value.numeric }" class="item-list list">
+							<li ng-repeat="listItem in item.content" class="list-item fontSize-{{ item.text.settings.fontSize.value }} fontWeight-{{ item.text.settings.fontWeight.value }} color-{{ item.text.settings.color.value }}">
+								<div class="list-item-content">
+									<textarea
+										class="contenteditable fontSize-{{ item.text.settings.fontSize.value }} fontWeight-{{ item.text.settings.fontWeight.value }} color-{{ item.text.settings.color.value }}"
+										placeholder="Тут будет элемент списка">{{ listItem.html }}</textarea>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div widget-item="item.text" widget-item-type="item.typeValue" widget-item-data="item"></div>
+				</div>
+			</div>
+			<div class="section-content" ng-if="item.typeValue == 'image'">
+				<div class="widget-holder">
+					<div class="widget-trigger image-trigger">
+						<div class="image-holder imgWidth-{{ item.image.settings.width.value }} imgHeight-{{ item.image.settings.height.value }} imgType-{{ item.image.settings.viewImage.value }}">
+							<div class="image-placeholder" st-icon="'logo'"></div>
+							<div class="image contenteditable"></div>
+						</div>
+					</div>
+					<div widget-item="item.image" widget-item-type="item.typeValue"></div>
+				</div>
+				<div class="widget-holder pull-center" ng-if="item.image.settings.visibility.value">
+					<div class="widget-trigger">
+						<input
+							type="text"
+							class="contenteditable item-caption captionWidth-{{ item.image.settings.width.value }} fontSize-{{ item.caption.settings.fontSize.value }} pull-{{ item.caption.settings.align.value }} fontWeight-{{ item.caption.settings.fontWeight.value }} color-{{ item.caption.settings.color.value }}"
+							placeholder="Придумайте подпись к фотографии"
+							value="{{ item.caption.html }}">
+					</div>
+					<div widget-item="item.caption" widget-item-type="item.typeValue"></div>
+				</div>
+			</div>
+			<div class="section-content" ng-if="item.typeValue == 'banner'">
+				<div class="banner-block bannerWidth-{{ item.banner.settings.width.value }}" ng-class="{ 'banner-noHeading': !item.banner.settings.bannerSettings.heading.value, 'banner-noText': !item.banner.settings.bannerSettings.text.value, 'banner-noLink': !item.banner.settings.bannerSettings.link.value }" >
+					<div class="widget-holder">
+						<div class="widget-trigger banner-trigger">
+							<div class="banner-holder bannerHeight-{{ item.banner.settings.height.value }} bannerPosition-{{ item.banner.settings.position.value }} bannerOverflow-{{ item.banner.settings.overflow.value }}">
+								<div class="banner-placeholder" st-icon="'logo'"></div>
+								<div class="banner contenteditable"></div>
+							</div>
+							<div class="banner-text-wrapper bannerPosition-{{ item.banner.settings.position.value }}">
+								<div class="banner-text-box">
+									<div class="banner-text-frame">
+										<div class="banner-text">
+											<input
+												ng-if="item.banner.settings.bannerSettings.heading.value"
+												type="text"
+												class="contenteditable item-heading fontSize-{{ item.banner.settings.bannerHeading.fontSize.value }} pull-{{ item.banner.settings.bannerHeading.align.value }} fontWeight-{{ item.banner.settings.bannerHeading.fontWeight.value }} color-{{ item.banner.settings.bannerHeading.color.value }}"
+												placeholder="Введите заголовок"
+												value="{{ item.heading.html }}">
+											<textarea
+												ng-if="item.banner.settings.bannerSettings.text.value"
+												class="contenteditable item-text fontSize-{{ item.banner.settings.bannerText.fontSize.value }} pull-{{ item.banner.settings.bannerText.align.value }} fontWeight-{{ item.banner.settings.bannerText.fontWeight.value }} color-{{ item.banner.settings.bannerText.color.value }}"
+												placeholder="Введите текст">{{ item.text.html }}</textarea>
+											<div class="btn-holder pull-{{ item.banner.settings.bannerLink.align.value }}" ng-if="item.banner.settings.bannerSettings.link.value">
+												<div ng-class="{ 'btn': item.banner.settings.bannerLink.linkType.value }" class="edited-btn color-{{ item.banner.settings.bannerLink.color.value }}">
+													<input
+														type="text"
+														class="contenteditable item-link fontSize-{{ item.banner.settings.bannerLink.fontSize.value }} fontWeight-{{ item.banner.settings.bannerLink.fontWeight.value }} color-{{ item.banner.settings.bannerLink.color.value }}"
+														placeholder="Введите текст ссылки"
+														value="{{ item.link.html }}">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div widget-item="item.banner" widget-item-type="item.typeValue"></div>
+					</div>
+				</div>
+			</div>
+			<div class="section-content" ng-if="item.typeValue == 'feature'">
+				<div class="feature-block positionVertical-{{ item.feature.settings.positionVertical.value }}">
+					<div class="feature-text-holder featureWidth-{{ item.feature.settings.width.value }}" ng-if="item.feature.settings.positionHorisontal.value == 2">
+						<div class="widget-holder">
+							<div class="widget-trigger">
+								<input
+									ng-if="item.feature.settings.featureSettings.heading.value"
+									type="text"
+									class="contenteditable item-heading fontSize-{{ item.heading.settings.fontSize.value }} pull-{{ item.heading.settings.align.value }} fontWeight-{{ item.heading.settings.fontWeight.value }} color-{{ item.heading.settings.color.value }}"
+									placeholder="Введите заголовок"
+									value="{{ item.heading.html }}">
+							</div>
+							<div widget-item="item.text" widget-item-type="item.typeValue"></div>
+						</div>
+						<div class="widget-holder">
+							<div class="widget-trigger">
+								<textarea
+									ng-if="item.feature.settings.featureSettings.text.value"
+									class="contenteditable item-text fontSize-{{ item.text.settings.fontSize.value }} pull-{{ item.text.settings.align.value }} fontWeight-{{ item.text.settings.fontWeight.value }} color-{{ item.text.settings.color.value }}"
+									placeholder="Введите текст">{{ item.text.html }}</textarea>
+							</div>
+							<div widget-item="item.feature" widget-item-type="item.typeValue"></div>
+						</div>
+						<div class="widget-holder">
+							<div class="widget-trigger">
+								<div class="btn-holder pull-{{ item.link.settings.align.value }}" ng-if="item.feature.settings.featureSettings.link.value">
+									<div ng-class="{ 'btn': item.link.settings.linkType.value }" class="color-{{ item.link.settings.color.value }} edited-btn">
+										<input
+											type="text"
+											class="contenteditable item-link fontSize-{{ item.link.settings.fontSize.value }} fontWeight-{{ item.link.settings.fontWeight.value }} color-{{ item.link.settings.color.value }}"
+											placeholder="Введите текст ссылки"
+											value="{{ item.link.html }}">
+									</div>
+								</div>
+							</div>
+							<div widget-item="item.link" widget-item-type="item.typeValue"></div>
+						</div>
+					</div>
+					<div class="widget-holder feature-image-holder featureWidth-{{ item.feature.settings.width.value }}">
+						<div class="widget-trigger">
+							<div class="feature-holder featureType-{{ item.feature.settings.viewImage.value }}">
+								<div class="feature-placeholder" st-icon="'logo'"></div>
+								<div class="feature contenteditable featureHeight-{{ item.feature.settings.height.value }}"></div>
+							</div>
+						</div>
+						<div widget-item="item.feature" widget-item-type="item.typeValue"></div>
+					</div>
+					<div class="feature-text-holder featureWidth-{{ item.feature.settings.width.value }}" ng-if="item.feature.settings.positionHorisontal.value == 1">
+						<div class="widget-holder">
+							<div class="widget-trigger">
+								<input
+									ng-if="item.feature.settings.featureSettings.heading.value"
+									type="text"
+									class="contenteditable item-heading fontSize-{{ item.heading.settings.fontSize.value }} pull-{{ item.heading.settings.align.value }} fontWeight-{{ item.heading.settings.fontWeight.value }} color-{{ item.heading.settings.color.value }}"
+									placeholder="Введите заголовок"
+									value="{{ item.heading.html }}">
+							</div>
+							<div widget-item="item.text" widget-item-type="item.typeValue"></div>
+						</div>
+						<div class="widget-holder">
+							<div class="widget-trigger">
+								<textarea
+									ng-if="item.feature.settings.featureSettings.text.value"
+									class="contenteditable item-text fontSize-{{ item.text.settings.fontSize.value }} pull-{{ item.text.settings.align.value }} fontWeight-{{ item.text.settings.fontWeight.value }} color-{{ item.text.settings.color.value }}"
+									placeholder="Введите текст">{{ item.text.html }}</textarea>
+							</div>
+							<div widget-item="item.feature" widget-item-type="item.typeValue"></div>
+						</div>
+						<div class="widget-holder">
+							<div class="widget-trigger">
+								<div class="btn-holder pull-{{ item.link.settings.align.value }}" ng-if="item.feature.settings.featureSettings.link.value">
+									<div ng-class="{ 'btn': item.link.settings.linkType.value }" class="color-{{ item.link.settings.color.value }} edited-btn">
+										<input
+											type="text"
+											class="contenteditable item-link fontSize-{{ item.link.settings.fontSize.value }} fontWeight-{{ item.link.settings.fontWeight.value }} color-{{ item.link.settings.color.value }}"
+											placeholder="Введите текст ссылки"
+											value="{{ item.link.html }}">
+									</div>
+								</div>
+							</div>
+							<div widget-item="item.link" widget-item-type="item.typeValue"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="page-section">
+			<div class="section-type"></div>
+			<div class="section-content">
+				<a href="#" class="adminPages-new-itemNew" ng-click="newItem($event)">
+					<span st-icon="'plus'"></span>
+					Новый блок
+				</a>
+			</div>
+		</section>
+		<div class="modal-wrapper" st-modal="'adminPages-new-itemNew'">
+			<div class="modal-box">
+				<div class="modal-frame">
+					<div class="modal-holder">
+						<h5 class="pull-center modal-heading">Новый блок</h5>
+						<hr>
+						<form id="newPage-itemForm">
+							<fieldset>
+								<div class="form-row">
+									<label for="item-type" class="pull-left">Тип</label>
+									<div class="input-holder">
+										<select id="item-type">
+											<option ng-repeat="(key, value) in newItems" value="{{ key }}">{{ value.typeLabel }}</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row pull-right">
+									<button type="submit" class="btn btn-primary modal-hide" ng-click="addItem($event)">Выбрать</button>
+								</div>
+							</fieldset>
+						</form>
+						<a href="#" class="modal-hide-link modal-hide" st-icon="'close'">Скрыть</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>

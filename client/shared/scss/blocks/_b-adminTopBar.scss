@@ -1,0 +1,58 @@
+.adminTopBar {
+	width: 100%;
+	margin-bottom: 40px;
+}
+.adminTopBar:after {
+	@include clearfix;
+}
+.admin-logo {
+	float: left;
+}
+.admin-logo svg {
+	width: 150px;
+	height: 75px;
+}
+.adminNav {
+	float: left;
+	margin-left: 40px;
+	padding-top: 13px;
+	font-size: $h6FontSize;
+	line-height: $primaryLineHeight;
+}
+.adminNav .adminNav-listItem {
+	float: left;
+	margin-left: 40px;
+}
+.adminNav .adminNav-listItem-link {
+	overflow: hidden;
+	display: block;
+	color: $primaryColor;
+	@include transition-color;
+}
+.adminNav .adminNav-listItem.current .adminNav-listItem-link,
+.adminNav .adminNav-listItem-link:hover {
+	color: $purpleColor;
+	text-decoration: none;
+}
+.adminNav .adminNav-listItem-link .adminNav-list-iconHolder {
+	display: block;
+	margin: 0 auto 3px;
+	width: 40px;
+	height: 40px;
+	background: $primaryBg;
+	border-radius: 100%;
+	padding: 7px 0;
+	box-sizing: border-box;
+	@include transition-bg;
+}
+.adminNav .adminNav-listItem-link svg {
+	@include transition-fill;
+}
+.adminNav .adminNav-listItem.current .adminNav-listItem-link .adminNav-list-iconHolder,
+.adminNav .adminNav-listItem-link:hover .adminNav-list-iconHolder {
+	background: $purpleBg;
+}
+.adminNav .adminNav-listItem.current .adminNav-listItem-link svg,
+.adminNav .adminNav-listItem-link:hover svg {
+	fill: $primaryBg;
+}

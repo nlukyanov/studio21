@@ -1,0 +1,9 @@
+<a href="#" st-icon="'color'" ng-click="triggerToggleDrop($event)" tabindex="-1">Color</a>
+<div class="widget-drop">
+	<div class="slider-holder color-sliderHolder" ng-show="widgetBtnColorView.value == 'text' || !widgetBtnColorView">
+		<div class="color-slider"></div>
+	</div>
+	<div class="slider-holder background-sliderHolder" ng-show="widgetBtnColorView && widgetBtnColorView.value == 'heading' && widgetBtnColorBg">
+		<div class="background-slider"></div>
+	</div>
+</div>

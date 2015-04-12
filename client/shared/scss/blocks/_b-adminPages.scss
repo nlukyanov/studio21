@@ -1,0 +1,294 @@
+/* ADMIN PAGES start */
+.adminPages-list {
+	position: relative;
+	margin-left: -40px;
+	padding: 40px 0;
+}
+.adminPages-listItem {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	height: 200px;
+	margin-left: 40px;
+	position: relative;
+}
+.adminPages-listTitle {
+	display: block;
+	text-transform: uppercase;
+	font-size: $h4FontSize;
+	font-weight: $fontBold;
+	margin-bottom: 12px;
+}
+$adminPages-listLink-borderRadius: 5px;
+.adminPages-listLink {
+	display: block;
+	height: 170px;
+	background-size: cover !important;
+	background-position: 50% 0 !important;
+	border: 2px solid $greyBg;
+	border-radius: $adminPages-listLink-borderRadius;
+	-webkit-box-shadow:inset 0 0 0 5px #fff;
+	box-shadow:inset 0 0 0 5px #fff;
+	position: relative;
+}
+.adminPages-listLink:after {
+	content: '';
+	position: absolute;
+	left: $adminPages-listLink-borderRadius - 1;
+	top: $adminPages-listLink-borderRadius - 1;
+	right: $adminPages-listLink-borderRadius - 1;
+	bottom: $adminPages-listLink-borderRadius - 1;
+	background: $secondaryBg;
+	opacity: 0;
+	@include transition-opacity;
+}
+.adminPages-listLink:hover:after {
+	opacity: .75;
+}
+.addPage-item {
+	width: 30px;
+}
+.addPage-link {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	top: 50%;
+	margin: -15px 0 0 -15px;
+	cursor: pointer;
+}
+.addPage-link svg {
+	width: 100%;
+	height: 100%;
+	-moz-transform: none;
+	-webkit-transform: none;
+	-o-transform: none;
+	-ms-transform: none;
+	transform: none;
+	@include transition-all;
+}
+.addPage-link:hover svg {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.alt-addPage-link {
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	margin-top: -10px;
+	cursor: pointer;
+}
+.alt-addPage-link svg {
+	fill: $primaryBg;
+	width: 100%;
+	height: 100%;
+	-moz-transform: none;
+	-webkit-transform: none;
+	-o-transform: none;
+	-ms-transform: none;
+	transform: none;
+	@include transition-all;
+}
+.alt-addPage-link:hover svg {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.adminPages-new {
+	width: 100%;
+}
+.adminPages-new:after {
+	@include clearfix;
+}
+.adminPages-new-asideList {
+	margin-right: -41px;
+}
+.adminPages-new-asideLabel {
+	cursor: pointer;
+	color: $secondaryColor;
+	font-size: $h5FontSize;
+	font-weight: $fontNormal;
+	line-height: $headingLineHeight;
+	margin: 0;
+}
+.newPage-settings {
+	margin-bottom: 2px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.newPage-settings label {
+	color: $primaryColor;
+}
+.newPage-settings-form input {
+	font-size: $h5FontSize;
+}
+.newPage-settings-form-col {
+	overflow: hidden;
+}
+.newPage-settings-form-col:first-child {
+	float: left;
+	width: 200px;
+	padding-right: 40px;
+}
+.newPage-settings-form-screenshotHolder {
+	background-color: $primaryBg;
+	border: 2px solid $greyBg;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 0 5px #fff;
+	box-shadow: inset 0 0 0 5px #fff;
+	width: 100%;
+	display: block;
+	padding-bottom: 82.5%;
+	position: relative;
+	cursor: pointer;
+}
+.newPage-settings-form-screenshotPlaceholder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+.newPage-settings-form-screenshotPlaceholder svg {
+	height: 100%;
+	vertical-align: middle;
+	fill: $greyBg;
+}
+.newPage-settings-form-screenshot {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+}
+.newPage-settings-form-screenshot-icon {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	background: $secondaryBg;
+	opacity: 0;
+	text-align: center;
+	@include transition-opacity;
+}
+.newPage-settings-form-screenshotHolder:hover .newPage-settings-form-screenshot-icon {
+	opacity: .75;
+}
+.newPage-settings-form-screenshot-icon svg {
+	height: 100%;
+	width: 50px;
+	vertical-align: middle;
+	fill: $primaryBg;
+}
+.newPage-settings-form-screenshotHolder input[type="file"] {
+	opacity: 0;
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+}
+.adminPages-new aside {
+	margin-right: -300px;
+}
+.adminPages-new article {
+	position: relative;
+	z-index: 1;
+	padding-top: 40px;
+}
+.adminPages-new .section-type {
+	width: 261px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.section-content {
+	padding-left: 301px;
+	position: relative;
+}
+.section-content .contenteditable {
+	outline: 0;
+	border: 1px solid transparent;
+	height: auto;
+	padding: 0;
+	background: none;
+	width: 100%;
+	resize: none;
+	font-family: $primaryFontFamily;
+	overflow: hidden;
+	@include transition-border;
+}
+.section-content .contenteditable:focus,
+.section-content .focus .contenteditable {
+	border: 1px solid $purpleBg;
+}
+.adminPages-new-itemNew {
+	line-height: 22px;
+	color: $greyColor;
+	font-size: $h6FontSize;
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;
+	font-weight: $fontBold;
+	padding-top: 2px;
+	text-transform: uppercase;
+	@include transition-color;
+}
+.adminPages-new-itemNew:hover {
+	text-decoration: none;
+	color: $primaryColor;
+}
+.adminPages-new-itemNew span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+.adminPages-new-itemNew svg {
+	width: 20px;
+	height: 20px;
+	fill: $greyBg;
+	margin-top: -2px;
+	-moz-transform: none;
+	-webkit-transform: none;
+	-o-transform: none;
+	-ms-transform: none;
+	transform: none;
+	@include transition-all;
+}
+.adminPages-new-itemNew:hover svg {
+	fill: $secondaryBg;
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+#newPage-itemForm {
+	margin-bottom: -25px;
+}
+.item-edit {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-top: -3px;
+}
+.item-edit svg {
+	fill: $primaryBg;
+	width: 100%;
+	height: 100%;
+}
+/* ADMIN PAGES end */
